@@ -1,0 +1,403 @@
+.txt{
+    width: 100%;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 2px;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+#map { 
+  border: 2px hidden transparent;
+  border-radius: 10px;
+  margin-top: 20px; 
+  height: 400px;
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+}  
+#signout
+{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#home
+{
+  margin-right: 10px;
+}
+.cover
+{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.valCover
+{
+  object-fit: cover;
+}
+
+#typeNames, #bottomNav
+{
+  padding-right: 5px;
+  text-align: center;
+}
+
+
+#bottomNav img
+{
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+#TypeMosquito a img{
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 2px hidden transparent;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+#TypeMosquito > a:hover > img, #bottomNav div > a:hover > img, .row .col-xs-3 div > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+body
+{
+  background-image: url('https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg');
+}
+
+.jumbotron
+{
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+@media only screen and (min-width: 800px) {
+  .generalMosquitos{
+    width:  100px;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    padding: 20px;
+  }
+  
+  .row span{
+    margin-top: 20px;
+  }
+  #bottomNav img{
+    height: 120px;
+    width: 120px; 
+    margin-top: 5px;
+  }
+  #bottomNav{
+    background-color:black;
+    padding-top: 5px;
+    padding-left: 3px;
+  }
+  
+  #bottomNav, #typeNames{
+    background-color:black;
+    color: white;
+    font-size: 11px;
+    padding-left: 8px;
+    padding-top: 5px;
+  }
+
+  .row .col-xs-3 img 
+  {
+    width: 150px;
+    height: 150px;
+  }
+
+  #galary span{
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .row .col-xs-3 img 
+    {
+      width: 180px;
+      height: 180px;
+    }
+    #galary span{
+      font-size: 10px;
+    }
+    #bottomNav img{
+      height: 150px;
+      width: 150px; 
+      margin-top: 5px;
+    }
+    #bottomNav, #typeNames{
+      background-color:black;
+      color: white;
+      font-size: 12px;
+      padding-left: 8px;
+      padding-top: 5px;
+    }
+  }
+
+@media only screen and (min-width: 700px) {
+.row .col-xs-3 img 
+  {
+    width: 120px;
+    height: 120px;
+  }
+  #galary span{
+    font-size: 7px;
+  }
+  #bottomNav img{
+    height: 100px;
+    width: 100px;
+    margin-top: 5px; 
+  }
+  #bottomNav, #typeNames{
+    background-color:black;
+    color: white;
+    font-size: 10px;
+    padding-left: 8px;
+    padding-top: 5px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .row .col-xs-3 img 
+  {
+    width: 90px;
+    height: 90px;
+  }
+  #galary span{
+    font-size: 5px;
+  }
+  #bottomNav img{
+    height: 75px;
+    width: 75px; 
+    margin-top: 5px;
+  }
+  #bottomNav, #typeName{
+    background-color:black;
+    color: white;
+    font-size: 9px;
+    padding-left: 8px;
+    padding-top: 5px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .row .col-xs-3 img 
+  {
+    width: 60px;
+    height: 60px;
+  }
+  #galary span{
+    font-size: 4px;
+  }
+  #bottomNav img{
+    height: 50px;
+    width: 50px; 
+    margin-top: 5px;
+  }
+  #bottomNav, #typeNames{
+    background-color:black;
+    color: white;
+    font-size: 8px;
+    padding-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .generalMosquitos{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width:  250px;
+      height: 100%;
+      background-position: 50% 50%;
+      background-repeat:   no-repeat;
+      background-size:     cover;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      
+  }
+  #bottomNav img{
+    height: 200px;
+    width: 200px; 
+    margin-top: 5px;
+  }
+  #bottomNav{
+    background-color:black;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+  
+  #bottomNav, #typeNames{
+    background-color:black;
+    color: white;
+    font-size: 15px;
+    padding-left: 30px;
+  }
+  #zoom_in
+  {
+    margin-left: 100px;
+  }
+
+  .row .col-xs-3 img 
+  {
+    width: 200px;
+    height: 200px;
+  }
+  .row .col-xs-3
+  {
+    font-size: 15px;
+  }
+  #galary span{
+    font-size: 12px;
+  }
+
+}
+#dontknow, #no
+{
+  margin-bottom: 20px;
+}
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+.jumbotron span{
+  font-size: 25px;
+}
+
+.right textarea, .right p, #rightSide button, #howSure button, #rightSideButton button, #out, #home
+{
+  float: right;
+}
+
+#selection{
+  font-size: 15px;
+}
+#dontknow{
+  margin-right: 15px;
+}
+ 
+  #newMosquito{
+    font-size: 15px;
+  }
+ 
+  .right textarea { font-size: 11px; }
+  
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    cursor: grab;
+    cursor: -o-grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  
+  .main img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .button {
+    width: 300px;
+    height: 60px;
+  }
+
+  * {
+      box-sizing: border-box;
+      text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+body{
+  font-style: italic;
+}
+#inputForName input
+{
+  width: 100%;
+}
+.container{
+  margin-top: 15px;
+}
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+#galary .col-xs-3{
+  padding-bottom: 10px;
+}
+
+#input
+{
+  border: 2px solid transparent;
+  border-radius: 10px; 
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row .col-xs-3 img
+{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}
+
+.row .col-xs-3
+{
+  background: black;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+
+
+.jumbotron a button, button, select, input 
+{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#userName
+{
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+#userName button{
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;  
+  border: 2px solid transparent;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#userName button:hover{
+  background: linear-gradient(to bottom, #ffffff 10%, #ccccff 100%);
+  border: 2px solid #00BFFF;
+}

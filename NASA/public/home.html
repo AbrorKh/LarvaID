@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mosquito.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
+
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script> 
+	<title>Dashboard</title>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="media/mosquito.mp4" type="video/mp4">
+    </video>               
+    <div id="userName">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <h3 class="mb-3" style="color: white;">Please, select a user:</h3>
+            </div>    
+            <div class="col-xs-2"></div>        
+        </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <button type="button" id="professor">User 1</button>
+                </div>    
+                <div class="col-xs-2"></div>
+            </div>
+            <div class="row">   
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <button type="button" id="sherKar">User 2</button>
+                </div>    
+                <div class="col-xs-2"></div>
+            </div> 
+            <div class="row">  
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <button type="button" id="tanvir">User 3</button>
+                </div>    
+                <div class="col-xs-2"></div>
+            </div>
+        </div> 
+    </div>
+    <div id="page">
+        <div class="container"> 
+            <div id="Culex_Nigrip"></div>
+        <div class="jumbotron">
+            <div id="rightSideButton">
+                <button type="button" class="btn btn-danger" id="signout">Sign out</button>
+                <a href="validated.html"><button type="button" class="btn btn-secondary">Validated Images</button></a>
+            </div>    
+            <div class="row">
+                    <div class="col-xs-12">
+                        <span id="type" style="font-style: italic; font-weight: bold;">Image source: NASA GLOBE Observer Mosquito Habitat Mapper</span><br/>
+                    </div>
+                </div>
+                <hr>
+                <br />     
+                <div id="inputForName" class="row">
+                        <div class="col-xs-7">
+                                <input type="text" id="newMosquito"></input>
+                                <br>
+                        </div> 
+                        <div class="col-xs-5">  
+                            <button type="submit" id="updateMosquito" class="btn btn-primary">Update Genus</button>
+                        </div>
+                    </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="rightSide">
+                        <button type="button" id="no" class="btn btn-success">Select Type</button>
+                        <button type="button" id="dontknow" class="btn btn-warning">Can't say</button>
+                    </div>
+                    <div id="howSure">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-warning" id="somewhatSure">Somewhat Sure</button>
+                                <button type="button" class="btn btn-primary" id="verySure">Very Sure</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="right">
+                        <p>Comment(s):</p>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="right">
+                        ​<textarea id="comments" rows="2" cols="50" placeholder="Please, specify the reason(s) here, if necessary."></textarea>
+                    </div>
+                </div>
+            </div>
+            <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <select id="selection" class="txt">
+                    <option value="choose">Choose a mosquito genera</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>  
+        </div>
+        <div class="row" id="TypeMosquito">
+                   
+        </div>
+        <br />
+            <!--<div id="map"></div>-->
+            <div class="detail">
+            </div>
+            <br>
+            <div class="row">
+                
+            </div>
+        </div>
+    
+    </div>  
+        <div id="bottomNav" class="row"></div>
+        <div id="typeNames" class="row"></div>
+    <hr>
+</div> 
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIaWQUe1gf5ns6Ey9ckpLAslvE3FGmMgY&callback=initMap" async defer></script>
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+<script src="js/mosquito.js"></script>
+</body>
+</html>
